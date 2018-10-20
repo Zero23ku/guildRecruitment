@@ -7,7 +7,9 @@ public class ApplicationConstants {
     public static final String REGION_US = "us";
     public static final String REALM_NAME = "Quelthalas";
     public static final String GUILD_NAME = "Honor Preservation";
+    public static final String GUILD_NAME_NO_SPACE = "Honor%20Preservation";
     public static final String OLD_GUILD_NAME = "Legion Alfa";
+    public static final String MEMBERS = "members";
 
 
     public static final String API_BLIZZARD_PUBLIC_KEY = "agqcnmw2hd5ge42u27ka5h69b7d5dtz5";

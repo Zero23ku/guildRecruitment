@@ -32,16 +32,25 @@ public class BlizzardService {
     }
 
     public String getGuildProgression() throws IOException {
+
         HttpClient client = HttpClientBuilder.create().build();
-        /*HttpGet request = new HttpGet(ApplicationConstants.API_RAIDERIO_URL + ApplicationConstants.RAIDERIO_GUILDS + "/" +
+        HttpGet request = new HttpGet(ApplicationConstants.API_RAIDERIO_URL + ApplicationConstants.RAIDERIO_GUILDS + "/" +
                 ApplicationConstants.RAIDERIO_PROFILE + "?" + ApplicationConstants.RAIDERIO_REGION + ApplicationConstants.REGION_US +
                 "&" + ApplicationConstants.RAIDERIO_REALM + ApplicationConstants.REALM_NAME + "&" + ApplicationConstants.RAIDERIO_NAME +
-                ApplicationConstants.GUILD_NAME + "&" + ApplicationConstants.RAIDERIO_FIELDS + ApplicationConstants.RAIDERIO_RANKINGS + "%2" +
-                ApplicationConstants.RAIDERIO_PROGRESSION);*/
-        HttpGet request = new HttpGet("https://raider.io/api/v1/guilds/profile?region=us&realm=Quelthalas&name=Honor%20Preservation&fields=raid_progression%2Craid_rankings");
+                ApplicationConstants.GUILD_NAME_NO_SPACE + "&" + ApplicationConstants.RAIDERIO_FIELDS + ApplicationConstants.RAIDERIO_RANKINGS + "%2C" +
+                ApplicationConstants.RAIDERIO_PROGRESSION);
         HttpResponse response = client.execute(request);
         return EntityUtils.toString(response.getEntity());
     }
 
+    public String getGuildMembers(){
+        return restTemplate.getForObject(
+                ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_GUILD + ApplicationConstants.REALM_NAME + "/" +
+                "{guildName}" + "?" + ApplicationConstants.RAIDERIO_FIELDS + "{members}&" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" +
+                ApplicationConstants.BLIZZARD_APIKEY + "{apiKey}",
+                String.class,
+                ApplicationConstants.GUILD_NAME, ApplicationConstants.MEMBERS, ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+        );
+    }
 
 }
