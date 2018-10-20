@@ -16,6 +16,10 @@
             .main{
                 margin-top:70px;
             }
+
+            .seccion{
+                padding-top:50px;
+            }
         </style>
     </head>
     <body>
@@ -44,7 +48,7 @@
 
             <div class="main">
                 <!--SECCION 1-->
-                <div id="seccion-1" class="row">
+                <div id="seccion-1" class="row seccion">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -66,7 +70,7 @@
                     </p>
                 </div>
 
-                <div id="seccion-2" class="row">
+                <div id="seccion-2" class="row seccion">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -88,7 +92,7 @@
                     </p>
                 </div>
 
-                <div id="seccion-3" class="row ">
+                <div id="seccion-3" class="row seccion">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -110,7 +114,7 @@
                     </p>
                 </div>
 
-                <div id="seccion-4" class="row ">
+                <div id="seccion-4" class="row seccion">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -132,7 +136,7 @@
                     </p>
                 </div>
 
-                <div id="seccion-5" class="row ">
+                <div id="seccion-5" class="row seccion">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -168,18 +172,17 @@
             console.log(test);
             console.log(test2)
             console.log(test3);
+        });
 
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
 
-            $('a[href^="#"]').on('click', function (e) {
-                e.preventDefault();
+            var target = this.hash;
+            var $target = $(target);
 
-                var target = this.hash;
-                var $target = $(target);
-
-                $('html, body').animate({
-                    'scrollTop': $target.offset().top
-                }, 1000, 'swing');
-            });
+            $('html, body').animate({
+                'scrollTop': $target.offset().top
+            }, 1000, 'swing');
         });
     </script>
 
