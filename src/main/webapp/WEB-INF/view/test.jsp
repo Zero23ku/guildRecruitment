@@ -128,10 +128,10 @@
                     <h1>Únete</h1>
                     <div class="row content-inside-section">
                         <div class="offset-md-4 col-md-5">
-                            <form class="form-inline">
+                            <form id="postular" class="form-inline">
                                 <div class="form-group mb-2">
                                     <label for="nombrePj" class="marginr-10px">Nombre de personaje</label>
-                                    <input type="text" class="form-control marginr-10px" id="nombrePj" placeholder="Ingresa el nombre de tu personaje"/>
+                                    <input type="text" class="form-control marginr-10px" id="nombrePj" placeholder="Nombre de tu personaje" required/>
                                     <button type="submit" class="btn btn-primary">Postular</button>
                                 </div>
                             </form>
@@ -208,6 +208,30 @@
             $('html, body').animate({
                 'scrollTop': $target.offset().top
             }, 1000, 'swing');
+        });
+
+        $(function(){
+            $("#postular").on('submit',function(e){
+                e.preventDefault();
+                var pjName = e.target.elements[0].value;
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/sendApply',
+                    data: {name: pjName},
+                    dataType: 'json',
+                    success: function (data){
+                        console.log("oie zii");
+                        console.log(data);
+                    },
+                    error: function (data){
+                        console.log("oie no");
+                        console.log(data);
+                    }
+                });
+            });
+
+
         });
     </script>
 

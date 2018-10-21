@@ -73,4 +73,13 @@ public class BlizzardService {
         );
     }
 
+    public String getCharacter(String name){
+        return restTemplate.getForObject(
+                ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_CHARACTER + "{realm}/"  + "{character}?" +
+                        ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY + "{apiKey}",
+                String.class,
+                ApplicationConstants.REALM_NAME, name.split("=")[1], ApplicationConstants.BLIZZARD_LOCALE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+        );
+    }
+
 }
