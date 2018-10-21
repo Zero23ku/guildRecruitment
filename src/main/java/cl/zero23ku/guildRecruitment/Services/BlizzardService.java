@@ -53,4 +53,24 @@ public class BlizzardService {
         );
     }
 
+    public String getRaces(){
+        return restTemplate.getForObject(
+                ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_DATA + ApplicationConstants.BLIZZARD_CHARACTER +
+                        ApplicationConstants.RACES + "?" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY +
+                        "{apiKey}",
+                String.class,
+                ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+        );
+    }
+
+    public String getClasses(){
+        return restTemplate.getForObject(
+                ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_DATA + ApplicationConstants.BLIZZARD_CHARACTER +
+                        ApplicationConstants.CLASSES + "?" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY +
+                        "{apiKey}",
+                String.class,
+                ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+        );
+    }
+
 }

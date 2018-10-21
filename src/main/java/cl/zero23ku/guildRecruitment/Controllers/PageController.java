@@ -21,12 +21,16 @@ public class PageController {
     @RequestMapping("/")
     public String mainPage(Model model) throws IOException {
         //model.addAttribute("test","ayyyy lmao");
-        String testGuild = blizzardService.getGuildInformation();
-        String testGuild2 = blizzardService.getGuildProgression();
-        String testGuild3 = blizzardService.getGuildMembers();
-        model.addAttribute("guildProgression",testGuild2);
-        model.addAttribute("guildInfo",testGuild);
-        model.addAttribute("guildMemmbers",testGuild3);
+        String guildInfo = blizzardService.getGuildInformation();
+        String guildProgression = blizzardService.getGuildProgression();
+        String guildMembers = blizzardService.getGuildMembers();
+        String races = blizzardService.getRaces();
+        String classes = blizzardService.getClasses();
+        model.addAttribute("guildProgression",guildInfo);
+        model.addAttribute("guildInfo",guildProgression);
+        model.addAttribute("guildMemmbers",guildMembers);
+        model.addAttribute("classes",classes);
+        model.addAttribute("races",races);
 
         return "test";
     }

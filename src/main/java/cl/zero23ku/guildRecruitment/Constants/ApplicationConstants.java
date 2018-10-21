@@ -10,11 +10,15 @@ public class ApplicationConstants {
     public static final String GUILD_NAME_NO_SPACE = "Honor%20Preservation";
     public static final String OLD_GUILD_NAME = "Legion Alfa";
     public static final String MEMBERS = "members";
+    public static final String CLASSES = "classes";
+    public static final String RACES = "races";
 
 
     public static final String API_BLIZZARD_PUBLIC_KEY = "agqcnmw2hd5ge42u27ka5h69b7d5dtz5";
     public static final String API_BLIZZARD_URL = "https://us.api.battle.net/wow/";
     public static final String BLIZZARD_GUILD = "guild/";
+    public static final String BLIZZARD_CHARACTER = "character/";
+    public static final String BLIZZARD_DATA = "data/";
     public static final String BLIZZARD_LOCALE = "locale=";
     public static final String BLIZZARD_APIKEY = "apikey=";
 
