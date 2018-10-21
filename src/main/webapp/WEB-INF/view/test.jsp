@@ -14,8 +14,6 @@
                 top: 0;
             }
 
-
-
             .main{
                 margin-top:70px;
             }
@@ -32,6 +30,10 @@
 
             .marginr-10px{
                 margin-right: 10px;
+            }
+
+            #seccion-3{
+                margin: 0 !important;
             }
 
             .sticky-footer{
