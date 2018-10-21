@@ -26,8 +26,8 @@ public class PageController {
         String guildMembers = blizzardService.getGuildMembers();
         String races = blizzardService.getRaces();
         String classes = blizzardService.getClasses();
-        model.addAttribute("guildProgression",guildInfo);
-        model.addAttribute("guildInfo",guildProgression);
+        model.addAttribute("guildInfo",guildInfo);
+        model.addAttribute("guildProgression",guildProgression);
         model.addAttribute("guildMemmbers",guildMembers);
         model.addAttribute("classes",classes);
         model.addAttribute("races",races);

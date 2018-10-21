@@ -12,6 +12,7 @@
                 background-color: #ffbb6f;
                 width: 100%;
                 top: 0;
+                z-index: 999;
             }
 
             .main{
@@ -34,6 +35,9 @@
 
             #seccion-3{
                 margin: 0 !important;
+                padding-top:50px;
+                padding-left:35px;
+                padding-right:20px;
             }
 
             .sticky-footer{
@@ -93,7 +97,7 @@
                 </div>
                 <div id="seccion-2" class="row seccion text-right">
                     <h1>Logros de la hermandad</h1>
-                    <div class="row content-inside-section">
+                    <div id="contenido-logros" class="row content-inside-section">
                         <p>
                             PURO MANCO DE MIERDA  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur ultrices magna, quis laoreet metus dignissim in. Etiam molestie ligula ac ex luctus, eu cursus est tempus. Nulla tempus vulputate lectus, id iaculis nibh gravida et. Sed vitae tristique dui, vitae aliquet ex. Morbi dui purus, vestibulum in lorem nec, sollicitudin interdum lectus. Maecenas sit amet sodales sapien. Nunc a metus elit. Ut ante mi, malesuada vel laoreet id, mattis at libero. Praesent pellentesque ex in ante condimentum ullamcorper. Aenean vel tempor turpis, eget varius est. Vestibulum ultrices libero et efficitur facilisis. Donec in sagittis velit, ut scelerisque magna.
 
@@ -150,10 +154,12 @@
             var races = ${races};
             var classes = ${classes};
             var coreInfoComplete = [];
+            var htmlCore = "";
+            var htmlProgress = "";
             var core = guildMembers.members.filter(function(e){
                 return e.rank <= 2;
             });
-
+            var actualTier = guildProgress.raid_progression.uldir;
             core.forEach(function(e){
                 var raceDetail = races.races.filter(function(f){
                     return f.id === e.character.race;
@@ -168,9 +174,6 @@
                 }
                 coreInfoComplete.push(ele);
             });
-            console.log(coreInfoComplete);
-
-            var htmlCore = "";
 
             coreInfoComplete.forEach(function(e){
                 var htmlAux =   '<div class="col-md-4 member"><div class="row">' +
@@ -180,8 +183,19 @@
 
                 htmlCore += htmlAux;
             });
-
             $("#guildCore").append(htmlCore);
+            console.log(actualTier);
+
+            var normalProgress =  actualTier.normal_bosses_killed === actualTier.total_bosses ? "¡Completo!" :  actualTier.normal_bosses_killed + '/' + actualTier.total_bosses ;
+            var heroicProgress = actualTier.heroic_bosses_killed === actualTier.total_bosses ? "¡Completo!" : (actualTier.heroic_bosses_killed + '/' + actualTier.total_bosses );
+
+            htmlProgress =  '<div class="col-md-4"><div class="row">' +
+                                 '<div class="col-md-4">Uldir</div>' +
+                                '<div class="col-md-4">Normal: '+ normalProgress +'</div>' +
+                                 '<div class="col-md-4">Normal: '+  heroicProgress  +'</div></div></div>';
+
+            $("#contenido-logros").append(htmlProgress);
+
 
         });
 
