@@ -192,7 +192,7 @@
             htmlProgress =  '<div class="col-md-4"><div class="row">' +
                                  '<div class="col-md-4">Uldir</div>' +
                                 '<div class="col-md-4">Normal: '+ normalProgress +'</div>' +
-                                 '<div class="col-md-4">Normal: '+  heroicProgress  +'</div></div></div>';
+                                 '<div class="col-md-4">Heróico: '+  heroicProgress  +'</div></div></div>';
 
             $("#contenido-logros").append(htmlProgress);
 
