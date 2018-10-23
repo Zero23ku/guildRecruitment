@@ -5,55 +5,8 @@
 <html lang="es">
     <head>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/custom.css">
         <title>Honor Preservation:: Guild PVE - Quel'Thalas</title>
-        <style>
-            .menu-custom{
-                position: fixed;
-                background-color: #ffbb6f;
-                width: 100%;
-                top: 0;
-                z-index: 999;
-            }
-
-            .main{
-                margin-top:70px;
-            }
-
-            .seccion{
-                padding-top:50px;
-                padding-left:35px;
-                padding-right:20px;
-                display:block;
-            }
-            .content-inside-section{
-                display: block;
-            }
-
-            .marginr-10px{
-                margin-right: 10px;
-            }
-
-            #seccion-3{
-                margin: 0 !important;
-                padding-top:50px;
-                padding-left:35px;
-                padding-right:20px;
-            }
-
-            .sticky-footer{
-                left: 0;
-                bottom: 0;
-                background-color: red;
-                color: white;
-                width: 100%;
-                padding: 10px;
-                margin-top: 30px;
-            }
-
-            .member{
-                border: solid 1px red;
-            }
-        </style>
     </head>
     <body>
         <div class="container-fluid">
@@ -146,6 +99,7 @@
     </body>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/custom.js"></script>
     <script>
         $(document).ready(function(){
             var guildInfo = ${guildInfo};
@@ -177,61 +131,22 @@
 
             coreInfoComplete.forEach(function(e){
                 var htmlAux =   '<div class="col-md-4 member"><div class="row">' +
-                                    '<div class="col-md-4">' + e.name + '</div>' +
-                                    '<div class="col-md-4">' + e.class + '</div>' +
-                                    '<div class="col-md-4">' + e.race + '</div></div></div>';
+                    '<div class="col-md-4">' + e.name + '</div>' +
+                    '<div class="col-md-4">' + e.class + '</div>' +
+                    '<div class="col-md-4">' + e.race + '</div></div></div>';
 
                 htmlCore += htmlAux;
             });
             $("#guildCore").append(htmlCore);
             console.log(actualTier);
-
             var normalProgress =  actualTier.normal_bosses_killed === actualTier.total_bosses ? "¡Completo!" :  actualTier.normal_bosses_killed + '/' + actualTier.total_bosses ;
             var heroicProgress = actualTier.heroic_bosses_killed === actualTier.total_bosses ? "¡Completo!" : (actualTier.heroic_bosses_killed + '/' + actualTier.total_bosses );
-
             htmlProgress =  '<div class="col-md-4"><div class="row">' +
-                                 '<div class="col-md-4">Uldir</div>' +
-                                '<div class="col-md-4">Normal: '+ normalProgress +'</div>' +
-                                 '<div class="col-md-4">Heróico: '+  heroicProgress  +'</div></div></div>';
+                '<div class="col-md-4">Uldir</div>' +
+                '<div class="col-md-4">Normal: '+ normalProgress +'</div>' +
+                '<div class="col-md-4">Heróico: '+  heroicProgress  +'</div></div></div>';
 
             $("#contenido-logros").append(htmlProgress);
-
-
-        });
-
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-
-            var target = this.hash;
-            var $target = $(target);
-
-            $('html, body').animate({
-                'scrollTop': $target.offset().top
-            }, 1000, 'swing');
-        });
-
-        $(function(){
-            $("#postular").on('submit',function(e){
-                e.preventDefault();
-                var pjName = e.target.elements[0].value;
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/sendApply',
-                    data: {name: pjName},
-                    dataType: 'json',
-                    success: function (data){
-                        console.log("oie zii");
-                        console.log(data);
-                    },
-                    error: function (data){
-                        console.log("oie no");
-                        console.log(data);
-                    }
-                });
-            });
-
-
         });
     </script>
 
