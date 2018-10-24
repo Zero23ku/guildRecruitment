@@ -34,6 +34,12 @@ public class ApplyController {
             mailSenderService.sendSimple(mail);
             return new JSONObject(result).toString();
         }catch (Exception e){
+            Mail mail = new Mail();
+            mail.setTo("marcelo.cardenas@usach.cl");
+            mail.setFrom("honor.preservation@gmail.com");
+            mail.setSubject("Esto es una prueba");
+            mail.setContent("ayyy lmao");
+            mailSenderService.sendSimple(mail);
             return new JSONObject("{\"msg\":\"personaje no encontrado\"}").toString();
         }
     }

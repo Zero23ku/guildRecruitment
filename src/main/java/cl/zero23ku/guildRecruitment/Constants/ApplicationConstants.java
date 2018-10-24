@@ -13,8 +13,6 @@ public class ApplicationConstants {
     public static final String CLASSES = "classes";
     public static final String RACES = "races";
 
-
-    public static final String API_BLIZZARD_PUBLIC_KEY = "agqcnmw2hd5ge42u27ka5h69b7d5dtz5";
     public static final String API_BLIZZARD_URL = "https://us.api.battle.net/wow/";
     public static final String BLIZZARD_GUILD = "guild/";
     public static final String BLIZZARD_CHARACTER = "character/";

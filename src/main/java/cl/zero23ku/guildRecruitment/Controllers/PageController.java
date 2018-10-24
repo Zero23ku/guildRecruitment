@@ -1,5 +1,6 @@
 package cl.zero23ku.guildRecruitment.Controllers;
 
+import cl.zero23ku.guildRecruitment.Config.PropertiesConfig;
 import cl.zero23ku.guildRecruitment.Services.BlizzardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,15 +13,18 @@ import java.io.IOException;
 public class PageController {
 
     BlizzardService blizzardService;
+    PropertiesConfig propertiesConfig;
 
-    PageController(BlizzardService blizzardService){
+    PageController(BlizzardService blizzardService, PropertiesConfig propertiesConfig){
         this.blizzardService = blizzardService;
+        this.propertiesConfig = propertiesConfig;
     }
 
 
     @RequestMapping("/")
     public String mainPage(Model model) throws IOException {
         //model.addAttribute("test","ayyyy lmao");
+        System.out.print(propertiesConfig.getApi());
         String guildInfo = blizzardService.getGuildInformation();
         String guildProgression = blizzardService.getGuildProgression();
         String guildMembers = blizzardService.getGuildMembers();

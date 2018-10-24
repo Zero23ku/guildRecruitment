@@ -1,5 +1,6 @@
 package cl.zero23ku.guildRecruitment.Services;
 
+import cl.zero23ku.guildRecruitment.Config.PropertiesConfig;
 import cl.zero23ku.guildRecruitment.Constants.ApplicationConstants;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -12,13 +13,16 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 
 
+
 @Service
 public class BlizzardService {
 
     RestTemplate restTemplate;
+    PropertiesConfig properties;
 
-    BlizzardService(RestTemplate restTemplate){
+    BlizzardService(RestTemplate restTemplate, PropertiesConfig properties){
         this.restTemplate = restTemplate;
+        this.properties = properties;
     }
 
 
@@ -27,7 +31,7 @@ public class BlizzardService {
                 ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_GUILD + ApplicationConstants.REALM_NAME + "/" +
                         "{guildName}?" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY + "{apikey}",
                 String.class,
-                ApplicationConstants.GUILD_NAME, ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+                ApplicationConstants.GUILD_NAME, ApplicationConstants.LANGUAGE, properties.getApi()
         );
     }
 
@@ -49,7 +53,7 @@ public class BlizzardService {
                 "{guildName}" + "?" + ApplicationConstants.RAIDERIO_FIELDS + "{members}&" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" +
                 ApplicationConstants.BLIZZARD_APIKEY + "{apiKey}",
                 String.class,
-                ApplicationConstants.GUILD_NAME, ApplicationConstants.MEMBERS, ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+                ApplicationConstants.GUILD_NAME, ApplicationConstants.MEMBERS, ApplicationConstants.LANGUAGE, properties.getApi()
         );
     }
 
@@ -59,7 +63,7 @@ public class BlizzardService {
                         ApplicationConstants.RACES + "?" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY +
                         "{apiKey}",
                 String.class,
-                ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+                ApplicationConstants.LANGUAGE, properties.getApi()
         );
     }
 
@@ -69,7 +73,7 @@ public class BlizzardService {
                         ApplicationConstants.CLASSES + "?" + ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY +
                         "{apiKey}",
                 String.class,
-                ApplicationConstants.LANGUAGE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+                ApplicationConstants.LANGUAGE, properties.getApi()
         );
     }
 
@@ -78,7 +82,7 @@ public class BlizzardService {
                 ApplicationConstants.API_BLIZZARD_URL + ApplicationConstants.BLIZZARD_CHARACTER + "{realm}/"  + "{character}?" +
                         ApplicationConstants.BLIZZARD_LOCALE + "{locale}&" + ApplicationConstants.BLIZZARD_APIKEY + "{apiKey}",
                 String.class,
-                ApplicationConstants.REALM_NAME, name.split("=")[1], ApplicationConstants.BLIZZARD_LOCALE, ApplicationConstants.API_BLIZZARD_PUBLIC_KEY
+                ApplicationConstants.REALM_NAME, name.split("=")[1], ApplicationConstants.BLIZZARD_LOCALE, properties.getApi()
         );
     }
 

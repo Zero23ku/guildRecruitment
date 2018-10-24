@@ -7,8 +7,8 @@ spring:
     default-encoding: UTF-8
     host: smtp.gmail.com
     port: 587
-    username: honor.preservation@gmail.com
-    password: h0n0rpr3s3rv4t10n
+    username: ${HONOR_PRESERVATION_MAIL}
+    password: ${HONOR_PRESERVATION_PASSWORD}
     properties:
       mail:
         smtp:
@@ -17,3 +17,5 @@ spring:
             enable: true
     protocol: smtp
     test-connection: false
+blizzard:
+  api: ${BLIZZARD_API_KEY}
