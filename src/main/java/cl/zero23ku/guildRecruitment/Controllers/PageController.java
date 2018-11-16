@@ -23,8 +23,18 @@ public class PageController {
 
     @RequestMapping("/")
     public String mainPage(Model model) throws IOException {
-        //model.addAttribute("test","ayyyy lmao");
-        System.out.print(propertiesConfig.getApi());
+        this.initializeInfo(model);
+        return "test";
+    }
+
+
+    @RequestMapping("/newhome")
+    public String newMainPage(Model model) throws IOException {
+        this.initializeInfo(model);
+        return "newHome";
+    }
+
+    public Model initializeInfo(Model model) throws IOException{
         String guildInfo = blizzardService.getGuildInformation();
         String guildProgression = blizzardService.getGuildProgression();
         String guildMembers = blizzardService.getGuildMembers();
@@ -35,8 +45,7 @@ public class PageController {
         model.addAttribute("guildMemmbers",guildMembers);
         model.addAttribute("classes",classes);
         model.addAttribute("races",races);
-
-        return "test";
+        return model;
     }
 
 
