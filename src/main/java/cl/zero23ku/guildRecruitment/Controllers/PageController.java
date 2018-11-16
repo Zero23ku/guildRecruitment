@@ -21,14 +21,14 @@ public class PageController {
     }
 
 
-    @RequestMapping("/")
+    @RequestMapping("/oldhome")
     public String mainPage(Model model) throws IOException {
         this.initializeInfo(model);
         return "test";
     }
 
 
-    @RequestMapping("/newhome")
+    @RequestMapping("/")
     public String newMainPage(Model model) throws IOException {
         this.initializeInfo(model);
         return "newHome";
