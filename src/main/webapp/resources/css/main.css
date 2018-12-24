@@ -1142,7 +1142,7 @@ td, th {
 .single-product {
   margin-top: 30px;
   background: #fff;
-  border-bottom: 2px solid #00ff8c;
+  border-bottom: 2px solid #bd0f0f;
   padding: 70px 20px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -1157,7 +1157,7 @@ td, th {
 
 .single-product .icon span {
   font-size: 48px;
-  color: #00ff8c;
+  color: #bd0f0f;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -1185,7 +1185,7 @@ td, th {
 }
 
 .single-product:hover {
-  background: #00ff8c;
+  background: #bd0f0f;
 }
 
 .single-product:hover .icon span, .single-product:hover .desc h4, .single-product:hover .desc p {
