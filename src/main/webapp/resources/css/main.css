@@ -40,8 +40,8 @@
 
 body {
   /*color: #777777;*/
-  color: #FFFFFF;
-  background: #666666;
+  color: #000000;
+  background: #dcd2b2;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -49,13 +49,6 @@ body {
   position: relative;
 }
 
-.desc .text-uppercase a, .text-core{
-    color: #FFFFFF !important;
-}
-
-.progressBar-percentage{
-    color: #FFFFFF;
-}
 
 ol, ul {
   margin: 0;
