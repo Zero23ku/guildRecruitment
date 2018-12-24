@@ -852,11 +852,11 @@ td, th {
 }
 
 .list:hover .progressBar-circle {
-  stroke: #00ff8c;
+  stroke: #bd0f0f;
 }
 
 .list:hover .progressBar-percentage {
-  color: #00ff8c;
+  color: #bd0f0f;
 }
 
 .list-item {
