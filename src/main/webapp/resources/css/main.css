@@ -39,7 +39,7 @@
 }
 
 .text-core, .text-uppercase a{
-    color: #FFFFFF !important;
+    color: #000000 !important;
 }
 
 
@@ -54,7 +54,7 @@
 body {
   /*color: #777777;*/
   color: #FFFFFF;
-  background: #bd0f0f;
+  background: #dcd2b2;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;

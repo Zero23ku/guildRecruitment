@@ -138,8 +138,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="product-area-title text-center">
-                        <p class="text-white text-uppercase" style="color:white !important;">Progreso</p>
-                        <h2 class="text-white h1" style="color:white !important;">Uldir</h2>
+                        <p class="text-white text-uppercase" style="color:black !important;">Progreso</p>
+                        <h2 class="text-white h1" style="color:black !important;">Uldir</h2>
                     </div>
                 </div>
             </div>
