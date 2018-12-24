@@ -43,8 +43,8 @@
 }
 
 
-.desc p{
-    color: #FFFFFF;
+.single-product .desc p{
+    color: #FFFFFF !important;
 }
 
 #team{
