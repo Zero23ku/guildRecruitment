@@ -39,12 +39,16 @@
 }
 
 .text-core, .text-uppercase a{
-    color: #000000 !important;
+    color: #FFFFFF !important;
 }
 
 
 .single-product .desc p{
     color: #000000 !important;
+}
+
+.list .text-uppercase{
+    color: #000000;
 }
 
 #team{
