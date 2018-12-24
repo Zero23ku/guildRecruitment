@@ -89,8 +89,10 @@
                             <span class="lnr lnr-star"></span>
                         </div>
                         <div class="desc">
-                            <h4>Estas cosas</h4>
-                            <p>Se pueden cambiar, o quitar</p>
+                            <h4>Buen ambiente</h4>
+                            <p>
+                                Nos gusta pasarlo bien sin importar tu raza, sexo, país, etc. Todos son bienvenidos
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -100,8 +102,8 @@
                             <span class="lnr lnr-magic-wand"></span>
                         </div>
                         <div class="desc">
-                            <h4>Quizas podríamos</h4>
-                            <p>Colocar algunas características de la guild</p>
+                            <h4>Posibilidades de crecer</h4>
+                            <p>También nos interesan jugadores nuevos. Todos partimos sin saber y aquí te podremos ayudar a mejorar.</p>
                         </div>
                     </div>
                 </div>
@@ -111,8 +113,8 @@
                             <span class="lnr lnr-sun"></span>
                         </div>
                         <div class="desc">
-                            <h4>Como buen ambiente</h4>
-                            <p>y noches de cumbiones, y cosas así</p>
+                            <h4>Compromiso</h4>
+                            <p>Nos interesa tu compromiso, lo mínimo que pedimos es llegar en los horarios establecidos y de no ser posible, avisar.</p>
                         </div>
                     </div>
                 </div>
@@ -122,8 +124,8 @@
                             <span class="lnr lnr-layers"></span>
                         </div>
                         <div class="desc">
-                            <h4>Los iconos</h4>
-                            <p>Igual se pueden cambiar, aquí están todos los disponibles <a href="https://linearicons.com/free" target="_blank"><b>aquí</b></a></p>
+                            <h4>Comunicación</h4>
+                            <p>Contamos con servidor de Discord y grupo de WhatsApp para informar sobre nuestras actividades y compartir memes.</p>
                         </div>
                     </div>
                 </div>
@@ -133,7 +135,7 @@
     <!-- End Product Area -->
     <!-- Start Progress Bar Area -->
     <section id="progreso">
-        <div class="container pt-150">
+        <div class="container section-full">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="product-area-title text-center">
@@ -206,7 +208,7 @@
                 <div class="col-lg-8">
                     <div class="product-area-title text-center">
                         <p class="text-uppercase">Nuestro Core</p>
-                        <h2 class="h1">Fotos de referencia, todos sabemos que no somos ni la mitad de hermosos</h2>
+                        <h2 class="h1 text-core">Fotos de referencia, todos sabemos que no somos ni la mitad de hermosos</h2>
                     </div>
                 </div>
             </div>

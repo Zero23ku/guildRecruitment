@@ -24,4 +24,4 @@ VOLUME /tmp
 EXPOSE 9000 9002 8787
 
 #Execute application
-ENTRYPOINT java $JAVA_OPTIONS $JAVA_DEBUG_PORT -jar app.jar
+ENTRYPOINT java $JAVA_OPTIONS -jar app.jar

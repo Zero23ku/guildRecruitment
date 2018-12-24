@@ -1,0 +1,6 @@
+version: '2.2'
+services:
+    guild-recruitment:
+        image: guild-recruitment
+        ports:
+            - 8080
