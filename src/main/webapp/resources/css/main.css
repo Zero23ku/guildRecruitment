@@ -42,6 +42,10 @@
     color: #FFFFFF !important;
 }
 
+.desc p{
+    color: #FFFFFF;
+}
+
 body {
   /*color: #777777;*/
   color: #FFFFFF;
