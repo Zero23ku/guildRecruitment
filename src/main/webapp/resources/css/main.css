@@ -38,10 +38,14 @@
   font-weight: 300;
 }
 
+.text-core, .text-uppercase a{
+    color: #FFFFFF !important;
+}
+
 body {
   /*color: #777777;*/
-  color: #000000;
-  background: #dcd2b2;
+  color: #FFFFFF;
+  background: #bd0f0f;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
