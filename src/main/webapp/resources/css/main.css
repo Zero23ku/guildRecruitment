@@ -42,8 +42,13 @@
     color: #FFFFFF !important;
 }
 
+
 .desc p{
     color: #FFFFFF;
+}
+
+#team{
+    background: #222222;
 }
 
 body {
