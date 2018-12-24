@@ -78,7 +78,6 @@
                 <div class="col-lg-8">
                     <div class="product-area-title text-center">
                         <p class="text-white text-uppercase">¿Quienes somos?</p>
-                        <h2 class="text-white h1">Keze io no zoi <br>100tifiko xdddd</h2>
                     </div>
                 </div>
             </div>
@@ -91,7 +90,7 @@
                         <div class="desc">
                             <h4>Buen ambiente</h4>
                             <p>
-                                Nos gusta pasarlo bien sin importar tu raza, sexo, país, etc. Todos son bienvenidos
+                                Nos gusta pasarlo bien sin importar tu raza, sexo o país Todos son bienvenidos
                             </p>
                         </div>
                     </div>
